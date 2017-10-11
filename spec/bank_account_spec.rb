@@ -32,6 +32,11 @@ end
      expect(account_one.balance).to eq(300)
      expect(account_two.balance).to eq(700)
  end
- it "has a minimum opening balance"
+    
+ it "throws an error if minimum opening balance of 200 is not met" do
+     expect { BankAccount.new(100, "Sarah")}.to raise_error(ArgumentError)
+     end
+    
+    
  it "allows the user to change the minimum balance"
 end
